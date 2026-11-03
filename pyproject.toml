@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hierarchical-hotnet"
+version = "1.0.0"
+description = "Hierarchical HotNet: an algorithm for finding hierarchies of altered subnetworks"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+requires-python = ">=3.5"
+dependencies = [
+    "numpy>=1.14",
+    "scipy>=0.19",
+    "networkx>=1.11",
+    "h5py>=2.7",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=2.1"]
+
+[project.urls]
+Repository = "https://github.com/raphael-group/hierarchical-hotnet"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+py-modules = [
+    "common",
+    "construct_hierarchy",
+    "construct_similarity_matrix",
+    "find_permutation_bins",
+    "generate_example_graph",
+    "hhio",
+    "hierarchical_clustering",
+    "hierarchical_clustering_tests",
+    "perform_consensus",
+    "permute_network",
+    "permute_scores",
+    "process_hierarchies",
+]
